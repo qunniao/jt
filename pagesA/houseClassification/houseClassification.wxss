@@ -1,0 +1,90 @@
+page{
+  background: #f2f2f2;
+}
+
+.header{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.header input{
+  width: 92%;
+  margin-left: 4%;
+  height: 50rpx;
+  line-height: 60rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  position: relative;
+}
+
+.tubiao_search{
+  display: flex;
+  position: absolute;
+  left: 45%;
+}
+
+.tubiao_search image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.searchText{
+  font-size: 20rpx;
+  color: #666;
+  margin-left: 10rpx;
+}
+
+.fenge{
+  width: 100%;
+  height: 20rpx;
+  background: #fff;
+}
+
+.caseList{
+  width: 100%;
+  display: block;
+}
+
+.caseItem{
+  width: 48.5%;
+  margin-left: 1%;
+  background: #fff;
+  float: left;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.caseItem image{
+  width: 100%;
+  height: 300rpx;
+}
+
+.title{
+  font-size: 26rpx;
+  color: #333;
+  padding-left: 15rpx;
+  padding-top: 15rpx;
+}
+
+.price{
+  font-size: 24rpx;
+  color: red;
+  padding-left: 15rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.noHouse{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+
+.noHouseTitle{
+  font-size: 26rpx;
+  color: #333;
+}

@@ -1,0 +1,92 @@
+<view class='header'>
+  <swiper class="swiper" autoplay="{{autoplay}}" duration="1000" circular="true" bindchange="swiperChange">
+    <swiper-item wx:if="{{hasVideo==true}}">
+      <video id="myVideo" src='{{videoUrl}}'
+        bindtap="bofang" controls='true' show-play-btn="false" show-fullscreen-btn="false"></video>
+    </swiper-item>
+    <swiper-item>
+      <image src="{{cover}}" class="slide-image"></image>
+    </swiper-item>
+    <block wx:for="{{imgUrls}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='title_price_share'>
+    <text class='title'>{{name}}</text>
+    <view class='price'>
+      <text class='priceTubiao'>￥</text>
+      <text class='money' wx:if="{{minPrice == null}}">{{maxPrice}}/㎡</text>
+      <text class='money' wx:elif="{{maxPrice == null}}">{{minPrice}}/㎡</text>
+      <text class='money' wx:else>{{minPrice}}-{{maxPrice}}/㎡</text>
+      <view class='share' bindtap="powerDrawera" data-statu="open">
+        <image src='../../res/imgs/share.png'></image>
+        <text class='shareText'>分享</text>
+      </view>
+      <view class="drawer_screen" bindtap="powerDrawera" data-statu="close" wx:if="{{showShareStatus}}"></view>
+      <!--content-->
+      <!--使用animation属性指定需要执行的动画-->
+      <view animation="{{animationData}}" class="drawer_attr_boxa" wx:if="{{showShareStatus}}">
+        <!--drawer content-->
+        <view class="drawer_contenta">
+          <view class='buttonSub'>
+            <button data-name="shareBtn" open-type="share">
+              <view class='shareImage'>
+                <image src='../../res/imgs/shareFriend.png'></image>
+              </view>
+              <text>分享给朋友</text>
+            </button>
+          </view>
+          <view class='buttonSub'>
+            <button bindtap='ewshow' canvas-id='canvasids'>
+              <view class='shareImage'>
+                <image src='../../res/imgs/shareHaibao.png'></image>
+              </view>
+              <text>生成海报分享</text>
+            </button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='tsbgbox' wx:if='{{twoshow}}' catchtouchmove='true'>
+  <view class='tsbg' bindtap='ewhiden'></view>
+  <canvas class="{{isIPX ? 'cavbox-IPX' : 'cavbox'}}" disable-scroll="true" bindtap="savePic" canvas-id="shareCanvas"></canvas>
+  <view bindtap='save' class="{{isIPX ? 'savebtn-IPX' : 'savebtn'}}">保存海报</view>
+</view>
+
+
+<!--button-->
+<view class="btn" bindtap="powerDrawer" data-statu="open">
+  <view class="drawer_content" wx:for='{{caseAttrs}}' wx:for-item='caseAttrs'>
+    <text class="drawer_title">{{caseAttrs.attrName}}</text>
+    <text class="line">{{caseAttrs.attrValue}}</text>
+  </view>
+</view>
+
+
+<view class='details'>
+  <text class='spxq'>图文详情</text>
+  <view wx:for="{{mobileDetail}}" class='content'>
+    <image src='{{item}}' mode='widthFix'></image>
+  </view>
+</view>
+
+<view class='dibude'>
+  <view class='goHome'>
+    <button bindtap='goHome'>
+      <image src='../../res/imgs/goHome.png'></image>
+      <text class='goHome'>首页</text>
+    </button>
+  </view>
+  <view class='goHome'>
+    <button open-type='contact'>
+      <image src='../../res/imgs/kefu.png'></image>
+      <text class='goHome'>客服</text>
+    </button>
+  </view>
+  <text class='yuyue' bindtap='goAppointment'>立即预约</text>
+</view>

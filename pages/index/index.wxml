@@ -1,0 +1,217 @@
+<view class="flex {{isIPX ? 'fix_nav_wp-IPX' : 'fix_nav_wp'}}"> 
+  <view class="nav_link" wx:key='*this' wx:for="{{navData}}"> 
+      <view bindtap='tabbar' data-current="{{item.current}}" class="ppp"> 
+        <button wx:if="{{item.current < 3}}" class='tabbarButton' hover-class="btn-hover">
+          <view class='center_content'> 
+            <image src='{{item.current == current?item.selectedIconPath:item.iconPath}}'/> 
+          </view> 
+          <view class="center_content {{item.current == current?'tabbar_select':'tabbar_unselect'}}"> 
+            <text>{{item.text}}</text>
+          </view> 
+        </button>
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{item.current == 3}}" hover-class="btn-hover" class='tabbarButton'>
+          <view class='center_content'> 
+            <image src='{{item.current == current?item.selectedIconPath:item.iconPath}}'/> 
+          </view> 
+          <view class="center_content {{item.current == current?'tabbar_select':'tabbar_unselect'}}"> 
+            <text>{{item.text}}</text>
+          </view> 
+        </button>
+      </view> 
+  </view> 
+</view> 
+
+<!-- 首页 -->
+<view wx:if="{{current==0}}" class='homePage'>
+  <view class="shopHeader"> 
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{afterColor}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item.cover}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- <image src='../../res/imgs/homePage_Jc.jpg' class='homeImg'></image> -->
+  </view> 
+
+  <view class='search' bindtap='goSearch'>
+    <input type='text' placeholder='搜索' disabled></input>
+    <image src='../../res/imgs/sousuo.png'></image>
+  </view>
+
+  <view class='classification'>
+    <view class='classificationItem' wx:for="{{firstType}}" bindtap='goHouseClassification' data-name="{{item.labelName}}" data-bid="{{item.bid}}">
+      <image src='{{item.cover}}'></image>
+      <text>{{item.labelName}}</text>
+    </view>
+  </view>
+
+  <view class='threeClassification'>
+    <view class='firstClassification' bindtap='goAppointment'>
+      <image src='../../res/imgs/yuyuekanfang.png'></image>
+      <text>预约看房</text>
+    </view>
+    <view class='ersan'>
+      <view class='secoudClassification' bindtap='goProcess'>
+        <image src='../../res/imgs/maifangliucheng.png'></image>
+        <text>买房流程</text>
+      </view>
+      <button class='thirdClassification' bindtap="conversation" open-type="contact">
+        <image src='../../res/imgs/bangwokanfang.png'></image>
+        <text>帮我买房</text>
+        <text id='sheng'>省心又省钱</text>
+      </button>
+    </view>
+  </view>
+
+  <!-- 房源列表 -->
+  <view class='houseList'>
+    <view class='houseItem' wx:for="{{house}}" bindtap='goHouseDetails' data-cid="{{item.case.cid}}">
+      <view class='img_title_content'>
+        <image src='{{item.case.cover}}'></image>
+        <view class='houseItemRight'>
+          <text class='title'>{{item.case.name}}</text>
+          <text class='chanquan' wx:for="{{item.caseAttrs}}" wx:if="{{index<3}}" wx:for-item="caseAttrs" decode='true'>{{caseAttrs.attrName}}：&nbsp;{{caseAttrs.attrValue}}</text>
+          <text class='houseItemRight_price' wx:if="{{item.case.minPrice ==null}}" decode='true'>参考均价:&nbsp;&nbsp;{{item.case.maxPrice}}/㎡</text>
+          <text class='houseItemRight_price' wx:elif="{{item.case.maxPrice ==null}}" decode='true'>参考均价:&nbsp;&nbsp;{{item.case.minPrice}}/㎡</text>
+          <text class='houseItemRight_price' wx:else decode='true'>参考均价:&nbsp;&nbsp;{{item.case.minPrice}}-{{item.case.maxPrice}}/㎡</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="{{isIPX ? 'dibu-IPX' : 'dibu'}}"></view>
+</view>
+
+<!-- 全部房源 -->
+<view wx:if="{{current==1}}" class='allListings'>
+  <view class='header'>
+    <view class='{{num==0?"active":""}}' data-num='0' catchtap='changeOil'>
+      <picker bindchange='bindPickerCity' mode='region' value='{{region}}'>
+        <image src='../../res/imgs/city.png' class='city'></image>
+        <text>{{city}}</text>
+      </picker>
+    </view>
+    <view class='{{num==1?"active":""}}' data-num='1' catchtap='changeOil'>
+      <text>综合</text>
+    </view>
+    <view class='{{num==2?"active":""}}' data-num='2' catchtap='changeOil'>
+      <text>最新</text>
+    </view>
+    <view class='{{num==3?"active":""}}' data-num='3' catchtap='changeOil'>
+      <text>价格</text>
+      <image src='{{images}}' class='paixu'></image>
+    </view>
+  </view>
+  <view class='allHouseList'>
+    <view class='allHouseItem' wx:for='{{allHouse}}' bindtap='goHouseDetails' data-cid="{{item.cid}}">
+      <image src='{{item.cover}}'></image>
+      <text class='allHouseItem_title'>{{item.name}}</text>
+      <text class='allHouseItem_price' wx:if="{{item.minPrice == null}}">￥{{item.maxPrice}}/㎡</text>
+      <text class='allHouseItem_price' wx:elif="{{item.maxPrice == null}}">￥{{item.minPrice}}/㎡</text>
+      <text class='allHouseItem_price' wx:else>￥{{item.minPrice}}-{{item.maxPrice}}/㎡</text>
+    </view>
+  </view>
+</view>
+
+<!-- 公司介绍 -->
+<view wx:if="{{current==2}}" class='company'>
+  <view class='topbj'>
+    <image src='../../res/imgs/beijing.png' class='bj'></image>
+    <view class='noName'>
+      <image src='../../res/imgs/companyIntroduction.png' class='companyIntroduction'></image>
+      <text class='introduction'>公司简介</text>
+    </view>
+  </view>
+  <!-- 公司简介 -->
+  <view class='gongsi'>
+    <view class='introductionList'>
+      <view class="introductionItem">
+        <!-- <view class='yuandian'></view> -->
+        <!-- rich-text.wxml -->
+        <rich-text class='neironga' nodes="{{intro}}"></rich-text>
+      </view>
+    </view>
+  </view>
+  <!-- 主营业务 -->
+  <view class='business'>
+    <view class='zhuyingyewu'>
+      <text decode="{{true}}">—————&ensp;&ensp;&ensp;主营业务&ensp;&ensp;&ensp;—————</text>
+    </view>
+    <view class='yewuItem'>
+      <view class='yewuItemTop' wx:for="{{yewu}}">
+        <view class='square'></view>
+        <text class='title'>{{item.name}}</text>
+      </view>
+    </view>
+    <!-- <view class='square'></view> -->
+  </view>
+  <!-- 办公环境 -->
+  <view class='bangonghuanjing'>
+    <view class='bangonghuanjing_top'>
+      <text class='bangonghuanjing_top_title'>公司概貌</text>
+      <text class='bangonghuanjing_top_english'>COMPANY PROFILE</text>
+    </view>
+    <view class='huanjingList'>
+      <swiper class='huanjingSwiper' indicator-dots="{{indicatorDotsa}}" current="{{dangqian}}" display-multiple-items="{{qwe}}" autoplay="{{autoplaya}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="{{afterColor}}">
+        <block wx:for="{{imgUrlsa}}">
+          <swiper-item>
+            <image bindtap='previewImg' data-index="{{item.index}}" src="{{item}}" class="slide-image" width="355" height="150"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+      <image src="../../res/imgs/shangyizhang.png" class='sahngyizhang' bindtap='shangyizhang'></image>
+      <image src="../../res/imgs/xiayizhang.png" class='xiayizhang' bindtap='xiayizhang'></image>
+  </view>
+  <!-- 联系我们 -->
+  <view class='contact'>
+    <text class='contectTitle'>联系我们</text>
+    <view class='wechat'>
+      <text class='wecharTtile'>微信:</text>
+      <text class='wechatContent'>{{weChat}}</text>
+    </view>
+    <view class='wechat'>
+      <text class='wecharTtile'>电话:</text>
+      <text class='wechatContent'>{{phone}}</text>
+    </view>
+    <view class='wechat'>
+      <text class='wecharTtile'>地址:</text>
+      <view class='wechatContenta'>{{address}}
+      <image src='../../res/imgs/daohang.png' bindtap='goMap'></image></view>
+    </view>
+  </view>
+  <view class="{{isIPX ? 'dibu-IPX' : 'dibu'}}"></view>
+</view>
+<!-- 我 -->
+<view wx:if="{{current==3}}" class='me'>
+  <view class='meTop'>
+    <open-data type="userAvatarUrl" class="weixintx"></open-data>
+    <open-data type="userNickName" lang="zh_CN" class="mingzi"></open-data>
+  </view>
+  <button class='yykf' bindtap='goAppointment'>
+    <image src='../../res/imgs/yykftb.png'></image>
+    <text class='yykf_title'>预约看房</text>
+  </button>
+  <view class='fourList'>
+    <!-- <button class='fourItem'>
+      <image src='../../res/imgs/bwkftb.png'></image>
+      <text class='yykf_title'>帮我看房</text>
+      <text class='you'></text>
+    </button> -->
+    <button class='fourItem' bindtap='goProcess'>
+      <image src='../../res/imgs/mflctb.png'></image>
+      <text class='yykf_title'>买房流程</text>
+      <text class='you'></text>
+    </button>
+    <button class='fourItem' bindtap="conversation" open-type="contact">
+      <image src='../../res/imgs/zxkftb.png'></image>
+      <text class='yykf_title'>在线客服</text>
+      <text class='you'></text>
+    </button>
+    <!-- <button class='fourItem'>
+      <image src='../../res/imgs/lxwmtb.png'></image>
+      <text class='yykf_title'>联系我们</text>
+      <text class='you'></text>
+    </button> -->
+  </view>
+</view>

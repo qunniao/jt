@@ -1,0 +1,363 @@
+page{
+  background: #F1F0F5;
+}
+
+#myVideo{
+  width: 100%;
+  height: 100%;
+}
+
+.header{
+  width: 100%;
+  padding-bottom: 30rpx;
+  background: #fff;
+}
+
+swiper{
+  width: 100%;
+  height: 700rpx;
+}
+
+.slide-image{
+  width: 100%;
+  height: 100%
+}
+
+.title_price_share{
+  display: flex;
+  flex-direction: column;
+}
+
+.title_price_share .title{
+  font-size: 30rpx;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+  padding-left: 20rpx;
+  padding-top: 40rpx;
+}
+
+.price{
+  display: flex;
+  color: red;
+  position: relative;
+  padding-left: 20rpx;
+  padding-top: 30rpx;
+}
+
+.priceTubiao{
+  font-size: 20rpx;
+  position: absolute;
+  bottom: 0;
+}
+
+.money{
+  font-size: 32rpx;
+  padding-left: 20rpx;
+}
+
+.share{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 30rpx;
+  top: -10rpx;
+  align-items: center;
+}
+
+.share image{
+  width: 50rpx;
+  height: 45rpx;
+}
+
+.shareText{
+  font-size: 22rpx;
+  color: #666;
+}
+
+.tsbgbox {
+  z-index: 1000;
+}
+
+.lexingqw{
+  padding-bottom: 20rpx;
+}
+
+.tsbg{
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.7);
+}
+
+.cavbox{
+  width:90%;
+  height:1000rpx;
+  position: fixed;
+  z-index: 1000;
+  top: 60rpx;
+  left: 5%;
+  background: #fff;
+}
+
+.cavbox-IPX{
+  width:90%;
+  height:1050rpx;
+  position: fixed;
+  z-index: 1000;
+  top: 120rpx;
+  left: 5%;
+}
+
+.savebtn{
+  width:200rpx;
+  height:80rpx;
+  background:#0090FF;
+  color:#FFF;
+  text-align:center;
+  line-height:80rpx;
+  position:fixed;
+  bottom:50rpx;
+  z-index:30;
+  left:280rpx;
+  border-radius:18rpx;
+}
+
+.savebtn-IPX{
+  width:200rpx;
+  height:80rpx;
+  background:#0090FF;
+  color:#FFF;
+  text-align:center;
+  line-height:80rpx;
+  position:absolute;
+  top:1260rpx;
+  z-index:30;
+  left:280rpx;
+  border-radius:18rpx;
+}
+
+/*button*/
+.btn {
+  width: 100%;
+  background: #fff;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+}
+/*mask*/
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+/*content*/
+.drawer_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: #fff;
+}
+.drawer_content {
+  overflow-y: scroll;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+.drawer_contenta {
+  padding: 20rpx 40rpx;
+  overflow-y: scroll;
+  display: flex;
+  background: #F2F2F2;
+}
+
+.drawer_title{
+  font:42rpx "microsoft yahei";
+  text-align: center;
+}
+
+.details{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.spxq{
+  font-size: 26rpx;
+  color: red;
+  border-bottom: 1px solid red;
+  padding-bottom: 26rpx;
+}
+
+.details .content{
+  width: 100%;
+  background: #fff;
+  padding-top: 10rpx;
+}
+
+.details .content:last-child{
+  padding-bottom: 100rpx;
+}
+
+.details .content image{
+  width: 95%;
+}
+
+.drawer_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: #fff;
+  padding-bottom: 30rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.drawer_attr_boxa {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: #fff;
+}
+
+.drawer_content {
+  width: 95%;
+  line-height: 60rpx;
+}
+
+.drawer_content:last-child{
+  border-bottom: 0;
+}
+
+.line{
+  padding-left: 30rpx;
+  font-size: 28rpx;
+  color: #525252;
+}
+
+.drawer_title{
+  font-size: 28rpx;
+  color: #8A8A8A;
+}
+
+.canshu{
+  width: 100%;
+  text-align: center;
+  padding-top: 20rpx;
+}
+
+.par{
+  font-size: 30rpx;
+  color: #525252;
+  letter-spacing: 2rpx;
+}
+
+.buttonSub{
+  width: 50%;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonSub button{
+  width: 100%;
+  height: 100%;
+  background: #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.buttonSub button::after{
+  border: none;
+}
+
+.shareImage{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonSub button image{
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.buttonSub button text{
+  font-size: 22rpx;
+  color: #525252;
+  padding-top: 10rpx;
+}
+
+.dibude{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.yuyue{
+  font-size: 30rpx;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #493131;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  right: 0;
+}
+
+.goHome button{
+  height: 100rpx;
+  width: 120rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.goHome button::after{
+  border-radius: 0;
+  border: none;
+}
+
+.goHome button image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-top: 10rpx;
+}
+
+.goHome{
+  font-size: 22rpx;
+  color: #8a8a8a;
+}

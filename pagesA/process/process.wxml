@@ -1,0 +1,45 @@
+<view class='processItem'>
+  <view class='processImg'>
+    <image src='../../res/imgs/liucheng1.jpg'></image>
+  </view>
+  <view class='processContent'>
+    <text class='number'>1</text>
+    <text class='content'>和置业顾问面谈，或电话，媒体介质等方式沟通具体需求，我们会以您的需求制定投资方案推荐合适的产品和楼盘。</text>
+  </view>
+</view>
+<view class='processItem'>
+  <view class='processImg'>
+    <image src='../../res/imgs/liucheng2.jpg'></image>
+  </view>
+  <view class='processContent'>
+    <text class='number'>2</text>
+    <text class='content'>和专属置业顾问预约考察的项目和具体时间体。</text>
+  </view>
+</view>
+<view class='processItem'>
+  <view class='processImg'>
+    <image src='../../res/imgs/liucheng3.jpg'></image>
+  </view>
+  <view class='processContent'>
+    <text class='number'>3</text>
+    <text class='content'>公司专车接送，置业顾问全程陪同讲解。</text>
+  </view>
+</view>
+<view class='processItem'>
+  <view class='processImg'>
+    <image src='../../res/imgs/liucheng4.jpg'></image>
+  </view>
+  <view class='processContent'>
+    <text class='number'>4</text>
+    <text class='content'>选到心仪房源后及时定金落位。</text>
+  </view>
+</view>
+<view class='processItem'>
+  <view class='processImg'>
+    <image src='../../res/imgs/liucheng5.jpg'></image>
+  </view>
+  <view class='processContent'>
+    <text class='number'>5</text>
+    <text class='content'>按订单上约定的时间到售楼部，签署在房管局进行备案后的购房买卖合同。</text>
+  </view>
+</view>

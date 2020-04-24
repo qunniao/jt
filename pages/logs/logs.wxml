@@ -1,0 +1,6 @@
+<view wx:if="{{canIUse}}" class="authorization">
+    <image src="../../res/imgs/anli (2).png"></image>
+    <text class="denglu">亲爱的用户，您好</text>
+    <text class="denglu">首次使用小程序请先登录</text>
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+</view>

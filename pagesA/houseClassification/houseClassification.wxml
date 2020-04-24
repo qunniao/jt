@@ -1,0 +1,24 @@
+<view class='header'>
+  <input type='text' disabled bindtap='goSearch'></input>
+  <view class='tubiao_search'>
+    <image src='../../res/imgs/sousuo.png'></image>
+    <text class='searchText'>搜索</text>
+  </view>
+</view>
+
+<view class='fenge'></view>
+
+<!-- 案例列表 -->
+<view class='caseList'>
+  <view class='caseItem' wx:for="{{caseLista}}" bindtap='goHouseDetails' data-cid="{{item.case.cid}}">
+    <image src='{{item.case.cover}}'></image>
+    <text class='title'>{{item.case.name}}</text>
+    <text class='price' wx:if="{{item.case.maxPrice == null}}">￥{{item.case.minPrice}}/㎡</text>
+    <text class='price' wx:elif="{{item.case.minPrice == null}}}}">￥{{item.case.maxPrice}}/㎡</text>
+    <text class='price' wx:else>￥{{item.case.minPrice}}-{{item.case.maxPrice}}/㎡</text>
+  </view>
+</view>
+
+<view class='noHouse'>
+  <text class='noHouseTitle' style='display:{{display}}'>暂时没有房源哦</text>
+</view>

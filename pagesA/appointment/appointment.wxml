@@ -1,0 +1,25 @@
+<view class='message'>
+  <text class='title'>门店信息</text>
+  <text class='company'>金廷基业房地产营销策划有限公司</text>
+  <text class='address'>地址：浙江省杭州市萧山区宁围街道盈丰路博地中心B座2701-2</text>
+  <text class='time'>营业时间：上午08：00-23：00</text>
+</view>
+
+<view class='type_name_phone'>
+  <text class='question'>您想看什么类型的房子？</text>
+  <view class='type' catchtap='changeOil'>
+    <text class='{{num==1?"active":""}}' data-num='1'>商铺</text>
+    <text class='{{num==2?"active":""}}' data-num='2'>住宅</text>
+    <text class='{{num==3?"active":""}}' data-num='3'>公寓</text>
+  </view>
+  <view class='name'>
+    <text class='xingming'>姓名：</text>
+    <input type='text' bindinput='userName'></input>
+  </view>
+  <view class='phone'>
+    <text class='dianhua'>联系电话：</text>
+    <input type='text' bindinput='userPhone'></input>
+  </view>
+</view>
+
+<button bindtap='submit'>立即预约</button>

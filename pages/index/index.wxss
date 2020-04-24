@@ -1,0 +1,830 @@
+/* 首页 */
+page{
+  background: #F3F2F7;
+}
+
+.tabbarButton{
+  height: 100%;
+  margin-top: -10rpx;
+  background: #fff;
+}
+
+.homeImg{
+  width: 100%;
+  height: 400rpx;
+}
+
+.tabbarButton::after{
+  border: none;
+}
+
+.homePage{
+  width: 100%;
+}
+
+.shopHeader{
+  width: 100%;
+  background: #fff;
+}
+
+swiper{
+  width: 100%;
+  height: 400rpx;
+}
+
+swiper image {
+  width:100%;
+  height:100%;
+}
+
+.searchInput{
+  width: 64%;
+  height: 80rpx;
+  margin-top: -50rpx;
+  margin-left: 10%;
+  border-radius: 40rpx;
+  background: #fff;
+  border: 0;
+  box-shadow: 0 5px 7px #eee;
+  position: absolute;
+  z-index: 1;
+  padding-left: 100rpx;
+  padding-right: 30rpx
+}
+
+.sousuo{
+  width:40rpx;
+  height:40rpx;
+  position: relative;
+  top: -30rpx;
+  left: 100rpx;
+  z-index: 10
+}
+
+.classification{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  background: #fff;
+}
+
+.classificationItem{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.classificationItem image{
+  width: 100rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+}
+
+.classificationItem:nth-child(4) image{
+  width: 90rpx;
+}
+
+.search{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  height: 90rpx;
+}
+
+.search input{
+  width: 82%;
+  height: 100%;
+  background: #fff;
+  border-radius: 45rpx;
+  padding-left: 90rpx;
+  padding-right: 30rpx;
+}
+
+.search image{
+  width: 45rpx;
+  height: 45rpx;
+  position: relative;
+  top: -65rpx;
+  left: 30rpx;
+}
+
+.classificationItem text{
+  font-size: 26rpx;
+  color: #343434;
+  padding-top: 20rpx;
+}
+
+.threeClassification{
+  width: 100%;
+  display: flex;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.firstClassification{
+  width: 40%;
+  height: 350rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+}
+
+.firstClassification image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 10rpx;
+}
+
+.firstClassification text{
+  font-size: 32rpx;
+  font-weight: bold;
+  position: absolute;
+  left: 40rpx;
+  margin-top: 15rpx;
+  z-index: 100;
+  letter-spacing: 6rpx;
+  color: #232323;
+}
+
+.ersan{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+.secoudClassification{
+  width: 95%;
+  height: 165rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+
+.secoudClassification image{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+.secoudClassification text{
+  font-size: 32rpx;
+  font-weight: bold;
+  position: absolute;
+  z-index: 50;
+  right: 35rpx;
+  margin-top: 15rpx;
+  letter-spacing: 6rpx;
+  color: #232323;
+}
+
+.thirdClassification{
+  width:95%;
+  height: 165rpx;
+  margin-top: 20rpx;
+  padding: 0;
+  margin-left: 0;
+}
+
+.thirdClassification image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.thirdClassification text{
+  font-size: 32rpx;
+  font-weight: bold;
+  position: absolute;
+  z-index: 50;
+  right: 35rpx;
+  margin-top: 15rpx;
+  letter-spacing: 6rpx;
+}
+
+#sheng{
+  position: absolute;
+  font-weight: normal;
+  right: 45rpx;
+  margin-top: 60rpx;
+  font-size: 20rpx;
+}
+
+.houseList{
+  width: 100%;
+  padding-bottom: 20rpx;
+}
+
+.houseItem{
+  width: 100%;
+  background: #fff;
+  padding-top: 10rpx;
+  position: relative;
+}
+
+.img_title_content{
+  width: 100%;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.img_title_content image {
+  width: 280rpx;
+  height: 250rpx;
+  margin: 20rpx;
+}
+
+.houseItemRight{
+  width: 57%;
+  height: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.houseItemRight .title{
+  font-size: 32rpx;
+  padding-bottom: 20rpx;
+}
+
+.chanquan{
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 40rpx;
+  width: 90%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.houseItemRight_price{
+  font-size: 28rpx;
+  color: red;
+  line-height: 50rpx;
+  font-weight: normal;
+  position: absolute;
+  bottom: 20rpx;
+}
+
+.chanquan:last-child{
+  letter-spacing: 3rpx;
+}
+
+.title_content_price{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title_content_price .title{
+  text-align: center;
+  font-size: 44rpx;
+  font-weight: bold;
+  letter-spacing: 8rpx;
+}
+
+.title_content_price .leixing{
+  font-size: 26rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  letter-spacing: 6rpx;
+  font-weight: bold;
+}
+
+.houseContent{
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 35rpx;
+  letter-spacing: 6rpx;
+}
+
+.bkhf_price{
+  display: flex;
+  margin-top: 25rpx;
+}
+
+.shuxian{
+  font-size: 22rpx;
+  position: relative;
+  top: 4rpx;
+  color: rgb(165, 164, 164);
+}
+
+.bkhf{
+  padding: 5rpx 20rpx;
+  background: #070304;
+  color: #DBD6B5;
+  font-size: 24rpx;
+  margin-left: 8rpx;
+  border-radius: 8rpx;
+}
+
+.cankao{
+  font-size: 22rpx;
+  color: #C5112F;
+  position: relative;
+  top: 4rpx;
+  left: 10rpx;
+  font-weight: bold;
+}
+
+.price{
+  font-size: 28rpx;
+  color: #C5112F;
+  position: relative;
+  left: 20rpx;
+  font-weight: bold;
+}
+
+.dibu{
+  width: 100%;
+  height: 120rpx;
+}
+
+.dibu-IPX{
+  width: 100%;
+  height: 150rpx;
+}
+
+/* 全部房源 */
+.allListings{
+  width: 100%;
+}
+
+.header{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+.header view{
+  width: 33%;
+  text-align: center;
+  font-size: 26rpx;
+  color: 	#666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.city{
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  top: 6rpx;
+}
+
+.paixu{
+  width: 25rpx;
+  height: 25rpx;
+  position: relative;
+}
+
+.header .active{
+  color: #382626;
+}
+
+.allHouseList{
+  width: 98%;
+  margin-left: 1%;
+  display: inline-block;
+  word-wrap:break-word; 
+  margin-top: 80rpx;
+}
+
+.allHouseItem{
+  width: 49%;
+  float: left;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15rpx;
+  background: #fff;
+}
+
+.allHouseItem:last-child{
+  margin-bottom: 130rpx;
+}
+
+.allHouseItem:nth-child(odd){
+  margin-right: 1%;
+}
+
+.allHouseItem image{
+  width: 100%;
+  height: 300rpx;
+}
+
+.allHouseItem_title{
+  font-size: 26rpx;
+  color: #666666;
+  padding-left: 15rpx;
+  padding-top: 15rpx;
+}
+
+.allHouseItem_price{
+  font-size: 24rpx;
+  color: red;
+  padding-left: 15rpx;
+  padding-top: 10rpx;
+}
+
+/* 公司介绍 */
+.company{
+  width: 100%;
+  height: 100%;
+  background: #F3F3F3;
+}
+
+.topbj{
+  width: 100%;
+  height: 380rpx;
+}
+
+.bj{
+  width: 100%;
+  height: 100%;
+}
+
+.noName{
+  text-align: center;
+  position: relative;
+  top: -224rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.companyIntroduction{
+  width: 54%;
+  height: 80rpx;
+  position: relative;
+  z-index: 100;
+}
+
+.introduction{
+  position: absolute;
+  font-size: 36rpx;
+  color: #fff;
+  line-height: 75rpx;
+  letter-spacing: 8rpx;
+  z-index: 100;
+}
+
+.gongsi{
+  width: 93%;
+  margin-left: 3.5%;
+  position: relative;
+  top: -180rpx;
+  z-index: 10;
+  background: #fff;
+  border-radius: 30rpx;
+  min-height: 300rpx;
+  box-shadow: 0 5px 3px #eee;
+}
+
+.introductionList{
+  padding-top: 70rpx;
+  border-radius: 30rpx;
+}
+
+.introductionItem{
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding-bottom: 20rpx;
+}
+
+.yuandian{
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 12rpx;
+  background: #9A9999;
+  margin-left: 20rpx;
+  margin-top: 6rpx;
+}
+
+.introductionList .neironga{
+  width: 91%;
+  margin-left: 4.5%;
+  line-height: 35rpx;
+  font-size: 26rpx;
+  color: #9A9999;
+}
+
+.business{
+  width: 93%;
+  margin-left: 3.5%;
+  background: #fff;
+  border-radius: 30rpx;
+  margin-top: -150rpx;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 3px #eee;
+}
+
+.zhuyingyewu{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.zhuyingyewu text{
+  font-size: 30rpx;
+  color: #493131;
+  font-weight: bold;
+}
+
+.yewuItem{
+  width: 94%;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+position: relative;
+}
+
+.yewuItem:last-child{
+  padding-bottom: 20rpx;
+}
+
+.yewuItemTop{
+  display: flex;
+  height: 50rpx;
+  text-align: center;
+  justify-content: center;
+position: relative;
+}
+
+.yewuItemTop .title{
+  font-size: 28rpx;
+  font-weight: bold;
+  padding-left: 20rpx;
+  color: #5C5B5B;
+  text-align: center;
+}
+
+.yewuItem .content{
+  font-size: 26rpx;
+  color: #666666;
+  padding: 10rpx;
+  text-indent: 50rpx;
+  line-height: 40rpx;
+  padding-bottom: 50rpx;
+  text-align: center;
+}
+
+.square{
+  width:22rpx; 
+  height:22rpx;
+  background:#5C5B5B;
+  transform:rotate(45deg);
+  margin-top: 8rpx;
+}
+
+.bangonghuanjing{
+  width: 93%;
+  margin-left: 3.5%;
+  border-radius: 30rpx;
+  margin-top: 40rpx;
+  background: #fff;
+  margin-bottom: 50rpx;
+  box-shadow: 0 5px 3px  #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.bangonghuanjing_top{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  top: 30rpx;
+}
+
+.bangonghuanjing_top_title{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #493131;
+}
+
+.bangonghuanjing_top_english{
+  font-size: 14rpx;
+  color: #493131;
+  text-decoration: underline;
+}
+
+.huanjingList{
+  width: 94%;
+  margin-left: 2.5%;
+  display: flex;
+  word-break: break-word;
+  position: relative;
+  top: 60rpx;
+}
+
+.huanjingItem{
+  width: 49.5%;
+  height: 208rpx;
+  float: left;
+  margin-right: 0.5%;
+  margin-bottom: 4rpx;
+}
+
+.huanjingItem image{
+  width: 100%;
+  height: 100%;
+}
+
+.contact{
+  width: 94%;
+  margin-left: 3%;
+  background: #fff;
+  border-radius: 30rpx;
+  box-shadow: 0 5px 3px #eee;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30rpx;
+}
+
+.contectTitle{
+  font-size: 36rpx;
+  color: #493131;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20rpx;
+  padding-bottom: 50rpx;
+}
+
+.wechat{
+  font-size: 30rpx;
+  color: #666666;
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  width: 85%;
+}
+
+.wechatContent{
+  padding-left: 10rpx;
+}
+
+.wechatContenta{
+  margin-top: -60rpx;
+  margin-left: 76rpx;
+  width: 90%;
+  position: relative;
+}
+
+.wechat image{
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  top: 10rpx;
+}
+
+.slide-image{
+  margin-left: 10rpx;
+}
+
+.sahngyizhang{
+  width: 50rpx;
+  height: 70rpx;
+  position: relative;
+  top: -128rpx;
+  left: 31rpx;
+}
+
+.xiayizhang{
+  width: 50rpx;
+  height: 70rpx;
+  position: relative;
+  top: -200rpx;
+  left: 622rpx;
+}
+
+.huanjingSwiper{
+  height: 300rpx;
+}
+
+/* 我 */
+.me{
+  width: 100%;
+}
+
+.meTop{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  background: #fff;
+  align-items: center;
+}
+
+.weixintx{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 30rpx;
+}
+
+.mingzi{
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  font-weight: bold;
+}
+
+.yykf{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.yykf::after{
+  border: none;
+}
+
+.yykf_title{
+  font-size: 30rpx;
+  color: #666666;
+  padding-left: 20rpx;
+}
+
+.yykf image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 30rpx;
+}
+
+.fourList{
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.fourList button::after{
+  border: none;
+}
+
+.fourItem{
+  width: 92%;
+  margin-left: 4%;
+  height: 130rpx;
+  border-bottom: 1px solid #F2F2F2;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #fff;
+}
+
+.fourItem:last-child{
+  border: 0;
+}
+
+.fourItem image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.fourItem:nth-child(3) image{
+  height: 70rpx;
+  width: 55rpx;
+  padding-left: 5rpx;
+}
+
+.fourItem:nth-child(4) image{
+  height: 55rpx;
+  width: 65rpx;
+}
+
+.fourItem:nth-child(4) text{
+  margin-left: -5rpx;
+}
+
+.you{
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 2px solid #DBDBDB;
+  border-right: 2px solid #DBDBDB;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 4%;
+}
